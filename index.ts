@@ -56,6 +56,23 @@ const validate =
     next()
   }
 
+// --- GET / ---
+app.get('/', async (_req: Request, res: Response) => {
+  const html = `
+    <!doctype html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <title>Node.js Senior Developer Challenge</title>
+      </head>
+      <body>
+        <h1>Node.js Senior Developer Challenge</h1>
+      </body>
+    </html>
+  `
+  return res.type('html').send(html)
+})
+
 // --- POST /orders ---
 const CreateOrderSchema = z.object({
   customerName: z
