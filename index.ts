@@ -69,8 +69,9 @@ app.get('/', async (_req: Request, res: Response) => {
         <h1>Node.js Senior Developer Challenge</h1>
         <p>Quick tests:</p>
         <ul>
-          <li><a href="/api/orders/123">View order #123 — sample legacy response (expected 200)</a></li>
-          <li><a href="/api/orders/404">View order #404 — simulate "order not found" (expected 404)</a></li>
+          <li><a href="/api/orders/123">View order #123</a> — expected 200</li>
+          <li><a href="/api/orders/abc">View order #abc</a> — expected 400</li>
+          <li><a href="/api/orders/404">View order #404</a> — simulated 404</li>
         </ul>
       </body>
     </html>
